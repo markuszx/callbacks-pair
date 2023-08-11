@@ -29,6 +29,13 @@ console.log(result4); // true
 
 function exactly(array, num, cb) {
   // Your code here
+  const trueCount = array.reduce((count, element) => {
+    if (cb(element)) {
+      return count + 1;
+    }
+    return count;
+  }, 0);
+  return trueCount === num;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
