@@ -27,6 +27,9 @@ console.log(result2); // 'ths s prtty cl rght'
 
 let sentenceMapper = function (sentence, cb) {
   // Your code here
+  const words = sentence.split(' ');
+  const mappedWords = words.map(word => cb(word));
+  return mappedWords.join(' ');
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
